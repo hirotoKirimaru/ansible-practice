@@ -1,0 +1,12 @@
+[localhost]
+127.0.0.1 ansible_connection=localhost
+
+[sample]
+127.0.0.1 ansible_connection=localhost
+
+[nodes]
+node-1 ansible_host=127.0.0.1 ansible_connection=localhost
+node-2 ansible_host=127.0.0.1 ansible_connection=localhost
+
+
+
