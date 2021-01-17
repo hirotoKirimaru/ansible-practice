@@ -1,0 +1,10 @@
+- hosts: nodes
+  vars:
+    sample_vars: hogehoge
+  tasks:
+    - shell: uptime
+      register: result
+    - debug: 
+        msg: "{{ result.stdout }}"
+    - debug:
+        msg: "{{ sample_vars }} "

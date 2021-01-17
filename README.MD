@@ -17,3 +17,9 @@ ansible sample -i inventory -m ping -o
 ansible nodes -i inventory -m ping -o
 ansible all -i inventory -m ping -o
 ```
+
+# Playbook
+
+```bash
+ansible-playbook -i inventory playbook.yml 
+```
