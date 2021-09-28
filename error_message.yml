@@ -5,7 +5,8 @@
         - name: "現在時刻取得"
           command: "uptime"
           register: result
-          ignore_errors: true
+          failed_when: false # エラーメッセージを出力しない
+          ignore_errors: true # エラーが発生しても無視する
         - name: "現在時刻が特定の日付より前か"
           when: true
           fail: 
