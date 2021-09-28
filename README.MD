@@ -22,4 +22,5 @@ ansible all -i inventory -m ping -o
 
 ```bash
 ansible-playbook -i inventory playbook.yml 
+ansible-playbook -i localhost error_message.yml 
 ```

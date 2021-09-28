@@ -1,0 +1,15 @@
+- hosts: localhost
+  tasks:
+    - name: 現在時刻
+      block: 
+        - name: "現在時刻取得"
+          command: "uptime"
+          register: result
+          ignore_errors: true
+        - name: "現在時刻が特定の日付より前か"
+          when: true
+          fail: 
+            msg: "{{ result }} 
+            エラーメッセージをカスタマイズする"
+        - debug: 
+            msg: "{{ result }}"
